@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    
+    int initial ='A', last = 'G';                               // inicializacion de variables
+    
+    for (int i = initial; i < last; i++){                       // for de posicion de menos letras a mas letras
+        
+        for (int j = initial; j <= i; j++) cout << char (j);    // for que imprime las letras de la primera parte
+        for (int k = 0; k <= ((last-i)*2)-2; k++) cout << ' ';  // for que imprime espacios
+        for (int l = i; l >= initial; l-- ) cout << char (l);   // imprime las letras de la segunda parte
+        cout<<endl;
+        
+    }
+    
+    for (int i = initial; i <= last; i++) cout << char (i);     // Imprime todas las letras de la primer parte
+    for (int i = last-1; i >= initial; i--) cout << char (i);   // Imprime todas las letras de la segunda parte
+    cout << endl;
+    
+    for (int i = last-1; i >= initial; i--){                    //Segundo for de posicion, de mas letras a menos letras
+        
+        for (int j = initial; j <= i; j++) cout << char (j);    //for que imprime las letras de la primera parte
+        for (int k = 0; k <= ((last-i)*2)-2; k++) cout << ' ';    // for que imprime espacios
+        for (int l = i; l >= initial; l-- ) cout << char (l);     // imprime las letras de la segunda parte
+        cout<<endl;
+        
+    }
+    
+    return 0;
+    
+}

@@ -1,0 +1,24 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main(){
+    
+    int numero = 0;
+    long long int suma = 0;
+    
+    cout << "Ingrese el numero: ";
+    cin >> numero;
+    
+    while(numero > 0){
+        
+        suma += pow(numero/10,numero%10);
+        numero = numero/10;
+        
+    }
+    
+    cout << suma;
+    
+    return 0;
+}
