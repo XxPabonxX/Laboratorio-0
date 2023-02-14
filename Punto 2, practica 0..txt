@@ -1,24 +1,24 @@
-#include <iostream>
+#include <iostream>                             //Librerias usadas.
 #include <math.h>
 
 using namespace std;
 
 int main(){
     
-    int numero = 0;
-    long long int suma = 0;
+    int numero = 0;                             //Inicializacion de variables.
+    long long int suma = 0;                     //
     
-    cout << "Ingrese el numero: ";
-    cin >> numero;
+    cout << "Ingrese el numero: ";              //Mensaje de peticion para el numero.
+    cin >> numero;                              //Entrada del numero.
     
-    while(numero > 0){
+    while(numero > 0){                          //Ciclo iterativo donde se cumula la suma de los digitos y se separan los digitos.
         
-        suma += pow(numero/10,numero%10);
-        numero = numero/10;
+        suma += pow((numero%10),(numero%10));   //Seperacion de digitos con el residio de la division por 10.
+        numero = numero/10;                     //Acortacion del numero inicial
         
     }
     
-    cout << suma;
+    cout << "La suma de los digitos potenciados asi mismos es: " << suma << endl;
     
     return 0;
 }
